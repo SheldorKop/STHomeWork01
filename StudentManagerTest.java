@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StudentManagerTest {
-    public static void main(String[] args) {
+    public static void SMTApp(){
         ArrayList<Student> array=new ArrayList<Student>();
 
         while (true) {
