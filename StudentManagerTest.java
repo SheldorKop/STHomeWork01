@@ -58,7 +58,7 @@ public class StudentManagerTest {
     public static void findStudent(ArrayList<Student> array) {
         Scanner scanner=new Scanner(System.in);
         boolean flag=false;
-        System.out.println("请输入你要搜索学生的姓名:");
+        System.out.println("请输入你要搜索的学生姓名:");
         String name=scanner.nextLine();
         int index=-1;
         for(int i=0;i<array.size();i++) {
