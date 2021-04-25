@@ -1,17 +1,15 @@
 package STHomework01;
-/*
- * 1 这是我的学生类
- */
+
 public class Student {
     private String id;
     private String name;
-    private String age;
-    private String address;
-    public Student(String id, String name, String age, String address) {
+    private String birDate;
+    private String gender;
+    public Student(String id, String name, String birDate, String gender) {
         this.id = id;
         this.name = name;
-        this.age = age;
-        this.address = address;
+        this.birDate = birDate;
+        this.gender = gender;
     }
     public Student() {
     }
@@ -21,11 +19,11 @@ public class Student {
     public void setName(String name) {
         this.name = name;
     }
-    public void setAge(String age) {
-        this.age = age;
+    public void setBirDate(String birDate) {
+        this.birDate = birDate;
     }
-    public void setAddress(String address) {
-        this.address = address;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
     public String getId() {
         return id;
@@ -33,11 +31,11 @@ public class Student {
     public String getName() {
         return name;
     }
-    public String getAge() {
-        return age;
+    public String getBirDate() {
+        return birDate;
     }
-    public String getAddress() {
-        return address;
+    public String getGender() {
+        return gender;
     }
 
 }

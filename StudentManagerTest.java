@@ -52,7 +52,7 @@ public class StudentManagerTest {
         System.out.println("学号\t姓名\t出生日期\t性别");
         for(int i=0;i<array.size();i++) {
             Student s=array.get(i);
-            System.out.println(s.getId() + "\t" + s.getName() + "\t" + s.getAge() + "\t" + s.getAddress());
+            System.out.println(s.getId() + "\t" + s.getName() + "\t" + s.getBirDate() + "\t" + s.getGender());
         }
     }
     public static void findStudent(ArrayList<Student> array) {
@@ -66,7 +66,7 @@ public class StudentManagerTest {
             if(student.getName().equals(name)) {
                 System.out.println("学号\t姓名\t出生日期\t性别");
                 Student s=array.get(i);
-                System.out.println(s.getId() + "\t" + s.getName() + "\t" + s.getAge() + "\t" + s.getAddress());
+                System.out.println(s.getId() + "\t" + s.getName() + "\t" + s.getBirDate() + "\t" + s.getGender());
                 flag=true;
             }
         }
@@ -98,12 +98,12 @@ public class StudentManagerTest {
         System.out.println("请输入学生名字:");
         String name=scanner.nextLine();
         System.out.println("请输入学生出生日期: ");
-        String age=scanner.nextLine();
+        String birDate=scanner.nextLine();
         System.out.println("请输入学生性别(homme or femme): ");
-        String address=scanner.nextLine();
+        String gender=scanner.nextLine();
         Student student=new Student();
-        student.setAddress(address);
-        student.setAge(age);
+        student.setGender(gender);
+        student.setBirDate(birDate);
         student.setId(id);
         student.setName(name);
         array.add(student);
@@ -143,14 +143,14 @@ public class StudentManagerTest {
             System.out.println("你要修改的学生信息不存在,请重新选择操作");
         }else {
             System.out.println("请输入新的学生出生日期: ");
-            String age=scanner.nextLine();
+            String birDate=scanner.nextLine();
             System.out.println("请输入新的学生名字:");
             String name=scanner.nextLine();
             System.out.println("请输入新的学生性别: ");
-            String address=scanner.nextLine();
+            String gender=scanner.nextLine();
             Student student=new Student();
-            student.setAddress(address);
-            student.setAge(age);
+            student.setGender(gender);
+            student.setBirDate(birDate);
             student.setId(id);
             student.setName(name);
             array.set(index, student);
