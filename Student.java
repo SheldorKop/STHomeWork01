@@ -10,7 +10,7 @@ public class Student {
         this.name = name;
         this.birDate = birDate;
         this.gender = gender;
-    }
+    }//学生信息
     public Student() {
     }
     public void setId(String id) {
@@ -38,4 +38,4 @@ public class Student {
         return gender;
     }
 
-}
+}//设置和搜索学生信息

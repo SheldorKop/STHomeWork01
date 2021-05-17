@@ -16,25 +16,25 @@ public class StudentManagerTest {
             System.out.println("*\t\t\t\t4 修改\t\t\t\t*");
             System.out.println("*\t\t\t\t5 输出\t\t\t\t*");
             System.out.println("*\t\t\t\t6 退出\t\t\t\t*");
-            System.out.println("***********************************");
+            System.out.println("***********************************");//主界面//2.1注释不必要
             Scanner scanner = new Scanner(System.in);
             String choiceString = scanner.nextLine();
             switch (choiceString) {
                 case "1":
                     addStudent(array);
-                    break;
+                    break;//4.2单个条件语句未加{}
                 case "2":
                     findStudent(array);
-                    break;
+                    break;//4.2单个条件语句未加{}
                 case "3":
                     deleteStudent(array);
-                    break;
+                    break;//4.2单个条件语句未加{}
                 case "4":
                     updateStudent(array);
-                    break;
+                    break;//4.2单个条件语句未加{}
                 case "5":
                     findAllStudent(array);
-                    break;
+                    break;//4.2单个条件语句未加{}
                 case "6":
 
                 default:
@@ -43,7 +43,8 @@ public class StudentManagerTest {
                     break;
             }
         }
-    }
+    }//3.4未空行
+
     public static void findAllStudent(ArrayList<Student> array) {
         if(array.isEmpty()) {
             System.out.println("对不起,目前没有学生信息可供查询,请回去重新操作");
@@ -54,7 +55,8 @@ public class StudentManagerTest {
             Student s=array.get(i);
             System.out.println(s.getId() + "\t" + s.getName() + "\t" + s.getBirDate() + "\t" + s.getGender());
         }
-    }
+    }//输出全部学生功能//3.4未空行
+
     public static void findStudent(ArrayList<Student> array) {
         Scanner scanner=new Scanner(System.in);
         boolean flag=false;
@@ -73,7 +75,8 @@ public class StudentManagerTest {
         if(flag==false) {
             System.out.println("不好意思,你要查询的学生信息不存在,请重新选择操作");
         }
-    }
+    }//搜索学生功能//3.4未空行
+
     public static void addStudent(ArrayList<Student> array) {
         Scanner scanner=new Scanner(System.in);
         String id;
@@ -92,8 +95,8 @@ public class StudentManagerTest {
             if(flag) {
                 System.out.println("你输入的学号已经被占用,请重新输入");
             }else {
-                break;
-            }
+                break;//3.7折行不恰当
+            }//4.3 if-else语句不甚规范
         }
         System.out.println("请输入学生名字:");
         String name=scanner.nextLine();
@@ -108,7 +111,8 @@ public class StudentManagerTest {
         student.setName(name);
         array.add(student);
         System.out.println("添加学生成功！");
-    }
+    }//添加学生功能//3.4未空行
+
     public static void deleteStudent(ArrayList<Student> array) {
         Scanner scanner=new Scanner(System.in);
         boolean flag=false;
@@ -125,7 +129,8 @@ public class StudentManagerTest {
         if(flag==false) {
             System.out.println("不好意思,你要删除的学生信息不存在,请重新选择操作");
         }
-    }
+    }//删除学生功能//3.4未空行
+
     public static void updateStudent(ArrayList<Student> array) {
         Scanner scanner=new Scanner(System.in);
         boolean flag=false;
@@ -155,8 +160,9 @@ public class StudentManagerTest {
             student.setName(name);
             array.set(index, student);
             System.out.println("修改成功");
-        }
-    }
+        }//4.3 if-else语句不甚规范
+    }//更新学生信息//3.4未空行
+
     public static String getPlace(int count) {
         String str="";
         for(int i=0;i<count;i++)
